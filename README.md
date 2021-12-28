@@ -1,6 +1,6 @@
 # ChromiteBugBounty-Caches
 
-This repository contains the tests that are required to be performed for testing the [Cache Subsystems] (https://gitlab.com/incoresemi/blocks/cache_subsystem/-/tree/master/) of the Chromite Core by [InCore Semiconductors] (https://incoresemi.com/).
+This repository contains the tests that are required to be performed for testing the Cache Subsystems of the Chromite Core by InCore Semiconductors.
 
 ## The tests that are being done are as follows - 
 
@@ -19,5 +19,5 @@ For the fourth test, a similar approach is considered as compared to the third t
 
 ## Attributes
 
-Cache subsystem repo on Gitlab by InCore Semiconductors
-Cache tests repository by Vishweswaran K () and BK Karthik ()
+1. Cache subsystem repo on Gitlab by InCore Semiconductors
+2. Cache tests repository by Vishweswaran K () and BK Karthik ()
