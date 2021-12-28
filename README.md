@@ -19,5 +19,5 @@ For the fourth test, a similar approach is considered as compared to the third t
 
 ## Attributes
 
-1. Cache subsystem repo on Gitlab by InCore Semiconductors
+1. Cache subsystem repository on Gitlab by InCore Semiconductors
 2. Cache tests repository by Vishweswaran K () and BK Karthik ()
