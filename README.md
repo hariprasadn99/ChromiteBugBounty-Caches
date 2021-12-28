@@ -9,7 +9,7 @@ This repository contains the tests that are required to be performed for testing
 3. To perform Load hit
 4. To perform Store hit
 
-For the first test, a simple addition of two numbers is performed. First, the fence instruction is called where any preceeding data is flushed. Then two registers are loaded with a certain value after which addition is performed with the sum being stored in another register. Lastly, the fence.i instruction is called where the instructions that are present in the cache are flushed.
+For the first test, a simple addition of two numbers is performed. First, the fence instruction is called where the cache is cleared. Then two registers are loaded with a certain value after which addition is performed with the sum being stored in another register. Lastly, the fence.i instruction is called where the instructions that are present in the cache are cleared.
 
 For the second test, an immediate is loaded into a single register and repeated operations are being performed using the same register which results in excessive usage of the register. This result in line thrashing of the cache.
 
@@ -17,7 +17,7 @@ For the third test, words are loaded to a single address multiple times, basical
 
 For the fourth test, a similar approach is considered as compared to the third test but with words being stored instead of being loaded, thereby resulting in a store hit.
 
-## Attributes
+## Contributors
 
-1. Cache subsystem repository on Gitlab by InCore Semiconductors
-2. Cache tests repository by Vishweswaran K () and BK Karthik ()
+1. Hariprasad N (hariprasadn99@gmail.com)
+2. Natasha Bonala (natashajessica567@gmail.com)
