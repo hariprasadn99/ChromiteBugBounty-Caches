@@ -15,7 +15,7 @@ For the second test, an immediate is loaded into a single register and repeated 
 
 For the third test, words are loaded to a single address multiple times, basically updating the Load Buffer. This ensures that two words are not assumed to be referred to different memory locations resulting in a load hit.
 
-For the fourth test, a similar approach is considered as compared to the third test but with words being stored instead of loaded, thereby resulting in a store hit.
+For the fourth test, a similar approach is considered as compared to the third test but with words being stored instead of being loaded, thereby resulting in a store hit.
 
 ## Attributes
 
