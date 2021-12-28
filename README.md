@@ -2,7 +2,7 @@
 
 This repository contains the tests that are required to be performed for testing the Cache Subsystems of the Chromite Core by InCore Semiconductors.
 
-## The tests that are being done are as follows - 
+## The tests that will be done are as follows - 
 
 1. To check if fence and fence.i work properly.
 2. To perform cache line thrashing
