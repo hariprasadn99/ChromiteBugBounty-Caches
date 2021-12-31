@@ -19,7 +19,7 @@ class uatg_cache_dcache_fill(IPlugin):
 		self._ways = _dcache_dict['ways']
 	
 	def generate_asm(self) -> List[Dict[str, str]]:
-		
+		asm = str()
 		asm += f'\tfence\n'
 		asm += f'\tli t0, -10\n'
 		asm += f'\tli t1, 20\n'
@@ -27,6 +27,7 @@ class uatg_cache_dcache_fill(IPlugin):
 		asm += f'\tfence.i\n'
 		
 		compile_macros = []
+		asm_data = str()
 
 		return [{
 			'asm_code': asm,
@@ -41,3 +42,4 @@ class uatg_cache_dcache_fill(IPlugin):
 	def generate_covergroups(self, config_file) -> str:
 		sv = ""
 		return sv
+	
