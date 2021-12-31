@@ -19,6 +19,7 @@ class uatg_cache_dcache_fill(IPlugin):
 		self._ways = _dcache_dict['ways']
 	
 	def generate_asm(self) -> List[Dict[str, str]]:
+		
 		asm += f'\tfence\n'
 		asm += f'\tli t0, -10\n'
 		asm += f'\tli t1, 20\n'
