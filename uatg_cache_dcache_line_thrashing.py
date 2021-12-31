@@ -19,6 +19,7 @@ class uatg_cache_dcache_fill(IPlugin):
 		self._ways = _dcache_dict['ways']
 	
 	def generate_asm(self) -> List[Dict[str, str]]:
+		asm = str()
 		asm += f'\tli t0, -10\n'
 		asm += f'\taddi t0, t0, t0\n'
 		asm += f'\tmul t0, t0, t0\n'
@@ -26,6 +27,7 @@ class uatg_cache_dcache_fill(IPlugin):
 		asm += f'\trem t0, t0, t0\n'
 		
 		compile_macros = []
+		asm_data = str()
 
 		return [{
 			'asm_code': asm,
