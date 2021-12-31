@@ -7,9 +7,11 @@ import os
 from random import *
 
 class uatg_cache_dcache_fill(IPlugin):
+	""" Constructor to specify self variables required for test. """
 	def __init__(self):
 		super().__init__()
 		
+	""" Selects the parameters to make the test valid to be run on the DUT. """
 	def execute(self, core_yaml, isa_yaml):
 		_dcache_dict = core_yaml['dcache_configuration']
 		_dcache_en = _dcache_dict['instantiate']
@@ -18,13 +20,14 @@ class uatg_cache_dcache_fill(IPlugin):
 		self._block_size = _dcache_dict['block_size']
 		self._ways = _dcache_dict['ways']
 	
+	""" Returns a string of the asm file which is to be generated. """
 	def generate_asm(self) -> List[Dict[str, str]]:
 		asm = str()
-		asm += f'\tfence\n'
-		asm += f'\tli t0, -10\n'
-		asm += f'\tli t1, 20\n'
-		asm += f'\taddi t0, t1, t2\n'
-		asm += f'\tfence.i\n'
+		asm += f'\tfence\n' # Clears the cache
+		asm += f'\tli t0, -10\n' # Loads -10 into t0 register
+		asm += f'\tli t1, 20\n' # Loads 20 into t1 register
+		asm += f'\taddi t0, t1, t2\n' # Adds the values stored in both the registers
+		asm += f'\tfence.i\n' # Clears the instructions from the cache
 		
 		compile_macros = []
 		asm_data = str()
@@ -36,9 +39,11 @@ class uatg_cache_dcache_fill(IPlugin):
 			'compile_macros': compile_macros
 		}]	
 	
+	""" Returns false based on patterns required in the DUT logs. """
 	def check_log(self, log_file_path, reports_dir) -> bool:
 		return False
 
+	""" Returns a formatted string (converted to System Verilog) containing all coverpoints/assertions/covergroups necessary for test. """
 	def generate_covergroups(self, config_file) -> str:
 		sv = ""
 		return sv
