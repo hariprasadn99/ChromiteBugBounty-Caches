@@ -24,9 +24,9 @@ class uatg_cache_dcache_fill(IPlugin):
 	def generate_asm(self) -> List[Dict[str, str]]:
 		asm = str()
 		asm += f'\tli t0, -10\n' # Loaded -10 into t0
-		asm += f'\taddi t0, t0, t0\n' # Added the value of t0 to itself and stored it to the same register
-		asm += f'\tmul t0, t0, t0\n' # Multiplied the value of t0 with itself and stored it to the same register
-		asm += f'\tdiv t0, t0, t0\n' # Divided the value of t0 by itself and stored it to the same register
+		asm += f'\taddi t0, t0, t0\n' # Added the value of t0 to itself and stored it in the same register
+		asm += f'\tmul t0, t0, t0\n' # Multiplied the value of t0 with itself and stored it in the same register
+		asm += f'\tdiv t0, t0, t0\n' # Divided the value of t0 by itself and stored it in the same register
 		asm += f'\trem t0, t0, t0\n' # Found the remainder between the value of t0 and itself and stored it in the same register
 		
 		compile_macros = []
