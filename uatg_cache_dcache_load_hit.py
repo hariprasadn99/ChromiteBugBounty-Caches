@@ -24,7 +24,7 @@ class uatg_cache_dcache_fill(IPlugin):
 	def generate_asm(self) -> List[Dict[str, str]]:
 		asm = str()
 		# Loading 100 words of 4 bytes each into the register x10.
-		for i in range(0,396,4) :
+		for i in range(0,392,4) :
 			asm += f'\tlw x10,' + str(i) + '(x13)\n'
 		
 		compile_macros = []
